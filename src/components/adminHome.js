@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
 
-export default function UserHome({userData}) {
+export default function AdminHome({userData}) {
     const logOut = () => {
         window.localStorage.clear();
         window.location.href = "./sign-in";
@@ -8,12 +8,10 @@ export default function UserHome({userData}) {
     return(
         <div className="auth-wrapper">
             <div className="auth-inner">
-            Name<h1>{userData.fname}</h1>
-            Email<h1>{userData.email}</h1>
-            <br/>
-            <button onClick={logOut} className="btn btn-primary">
-                Log Out
-            </button>
+                <h3>Welcome Admin</h3>
+                <button onClick={logOut} className="btn btn-primary">
+                    Log Out
+                </button>
             </div>
         </div>
     )

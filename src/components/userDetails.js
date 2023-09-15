@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
-// import AdminHome from "./adminHome";
+import AdminHome from "./adminHome";
 
 import UserHome from "./userHome";
 
@@ -37,7 +37,8 @@ export default function UserDetails() {
       });
   }, []);
 
-  return admin ? <h1>"Welcome Admin"</h1>:<UserHome userData={userData}/>
-//   <AdminHome /> : <UserHome userData={userData} />;
+  return admin ? 
+  // <h1>"Welcome Admin"</h1>:<UserHome userData={userData}/>
+  <AdminHome /> : <UserHome userData={userData} />;
 
 }
